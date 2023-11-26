@@ -1,5 +1,6 @@
 <!DOCTYPE html>
     <html lang="en">
+       
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +15,8 @@
         <link rel="stylesheet" href="assets/css/styles.css">
 
         <title>Coffee shop QR menu</title>
-        <script src="./fetch/post.js"></script>
     </head>
+    <script src="./fetch/post.js"></script>
     <body>
         <!-- LOADER -->
         <div class="load" id="load">
@@ -123,7 +124,7 @@
                         <div class="specialty__group specialty__line">
                             <img src="assets/img/specialty2.png" alt="" class="specialty__img">
 
-                            <h3 class="specialty__title">Амттан</h3>
+                            <h3 class="specialty__title" id="name1">Амттан</h3>
                             <p class="specialty__description">
                                 Шинэхэн гарсан амттаныг кофетойгоо хамт амтлаарай
                             </p>
@@ -150,17 +151,17 @@
 
                     <ul class="products__filters">
                         <li class="products__item products__line active-product" data-filter=".delicacies">
-                            <h3 class="products__title">Шинэ нэмэгдсэн</h3>
+                            <h3 class="products__title" id="name1">Шинэ нэмэгдсэн</h3>
                             <span class="products__stock">3 бүтээгдэхүүн</span>
                         </li>
 
                         <li class="products__item products__line" data-filter=".coffee">
-                            <h3 class="products__title">Халуун кофе</h3>
+                            <h3 class="products__title" id="name1">Халуун кофе</h3>
                             <span class="products__stock">5 бүтээгдэхүүн</span>
                         </li>
 
                         <li class="products__item" data-filter=".cake">
-                            <h3 class="products__title">Амттан</h3>
+                            <h3 class="products__title" id="name1">Амттан</h3>
                             <span class="products__stock">4 бүтээгдэхүүн</span>
                         </li>
                     </ul>
@@ -173,8 +174,8 @@
                             </div>
 
                             <div class="products__data">
-                                <h2 class="products__price">5k</h2>
-                                <h3 class="products__name">Cookies</h3>
+                                <h2 class="products__price" id="price1">5000₮</h2>
+                                <h3 class="products__name" id="category1">Cookies</h3>
     
                                 <button class="button products__button" id="addProductButton1">
                                     <i class='bx bx-shopping-bag'></i>
@@ -188,8 +189,8 @@
                             </div>
 
                             <div class="products__data">
-                                <h2 class="products__price">6k</h2>
-                                <h3 class="products__name">Croissant</h3>
+                                <h2 class="products__price" id="price1">6000₮</h2>
+                                <h3 class="products__name" id="category1">Croissant</h3>
     
                                 <button class="button products__button" id="addProductButton1">
                                     <i class='bx bx-shopping-bag'></i>
@@ -203,8 +204,8 @@
                             </div>
 
                             <div class="products__data">
-                                <h2 class="products__price">4k</h2>
-                                <h3 class="products__name">Croissant</h3>
+                                <h2 class="products__price" id="price1">4000₮</h2>
+                                <h3 class="products__name" id="category1">Croissant</h3>
     
                                 <button class="button products__button" id="addProductButton1">
                                     <i class='bx bx-shopping-bag'></i>
@@ -219,8 +220,8 @@
                             </div>
 
                             <div class="products__data">
-                                <h2 class="products__price">7k</h2>
-                                <h3 class="products__name">Americano</h3>
+                                <h2 class="products__price" id="price1">7000₮</h2>
+                                <h3 class="products__name" id="category1">Americano</h3>
     
                                 <button class="button products__button" id="addProductButton1">
                                     <i class='bx bx-shopping-bag'></i>
@@ -234,8 +235,8 @@
                             </div>
 
                             <div class="products__data">
-                                <h2 class="products__price">12k</h2>
-                                <h3 class="products__name">Pure coffee</h3>
+                                <h2 class="products__price" id="price1">12000₮</h2>
+                                <h3 class="products__name" id="category1">Pure coffee</h3>
     
                                 <!-- Update  button elements  IDs -->
 <button class="button products__button" id="addProductButton1">
@@ -251,8 +252,8 @@
                             </div>
 
                             <div class="products__data">
-                                <h2 class="products__price">7.5k</h2>
-                                <h3 class="products__name">Latte</h3>
+                                <h2 class="products__price" id="price1">7500₮</h2>
+                                <h3 class="products__name" id="category1">Latte</h3>
     
                                 <!-- Update  button elements  IDs -->
 <button class="button products__button" id="addProductButton1">
@@ -268,11 +269,11 @@
                             </div>
 
                             <div class="products__data">
-                                <h2 class="products__price">8k</h2>
-                                <h3 class="products__name">Moka Coffee</h3>
+                                <h2 class="products__price" id="price2">8000₮</h2>
+                                <h3 class="products__name" id="category2">Moka Coffee</h3>
     
                                 <!-- Update  button elements  IDs -->
-<button class="button products__button" id="addProductButton1">
+<button class="button products__button" id="addProductButton2">
     <i class='bx bx-shopping-bag'></i>
 </button>
                       
@@ -286,8 +287,8 @@
                             </div>
 
                             <div class="products__data">
-                                <h2 class="products__price">8k</h2>
-                                <h3 class="products__name">Cream Cake</h3>
+                                <h2 class="products__price" id="price1">8000₮</h2>
+                                <h3 class="products__name" id="category1">Cream Cake</h3>
     
                                 <!-- Update  button elements  IDs -->
 <button class="button products__button" id="addProductButton1">
@@ -302,9 +303,9 @@
                                 <img src="assets/img/cake2.png" alt="" class="products__img">
                             </div>
 
-                            <div class="products__data">
-                                <h2 class="products__price">5k</h2>
-                                <h3 class="products__name">Chocolate Croissant</h3>
+                            <div class="products__data" name="name">
+                                <h2 class="products__price" name="price1">5000₮</h2>
+                                <h3 class="products__name" name="category1">Chocolate Croissant</h3>
     
                                 <!-- Update  button elements  IDs -->
 <button class="button products__button" id="addProductButton1">
@@ -320,8 +321,8 @@
                             </div>
 
                             <div class="products__data">
-                                <h2 class="products__price">15k</h2>
-                                <h3 class="products__name">Pancake</h3>
+                                <h2 class="products__price" id="price1">15000₮</h2>
+                                <h3 class="products__name" id="category1">Pancake</h3>
     
                                 <!-- Update  button elements  IDs -->
 <button class="button products__button" id="addProductButton1">
@@ -337,8 +338,8 @@
                             </div>
 
                             <div class="products__data">
-                                <h2 class="products__price">12k</h2>
-                                <h3 class="products__name">Milk Cake</h3>
+                                <h2 class="products__price" id="price1">12000₮</h2>
+                                <h3 class="products__name" id="category1">Milk Cake</h3>
     
                                 <!-- Update  button elements  IDs -->
 <button class="button products__button" id="addProductButton1">
@@ -458,7 +459,7 @@
                                     </div>
                                     <div class="blog__reaction">
                                         <i class='bx bx-show' ></i>
-                                        <span>3.5K</span>
+                                        <span>3500₮</span>
                                     </div>
                                 </div>
                             </div>
@@ -551,46 +552,13 @@
        
         <script src="assets/js/main.js"></script>
     </body>
-    <script>
-        function addNewProduct(productDetails) {
-    fetch('/api/products', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(productDetails),
-    })
-    .then((response) => response.json())
-    .then((data) => {
-        console.log('Шинэ бүтээгдэхүүн:', data);
-        // Шинэ бүтээгдэхүүн нэмсний дараа шинэчлэгдсэн бүтээгдэхүүний жагсаалтыг татаж авна.
-        fetchProducts();
-    })
-    .catch((error) => console.error('Error:', error));
-}
+    <!-- ... your HTML content -->
 
-function fetchProducts() {
-    fetch('/api/products')
-    .then((response) => response.json())
-    .then((data) => {
-        console.log('Products:', data);
-    })
-    .catch((error) => console.error('Error:', error));
-}
+<!-- ... your HTML content -->
 
-document.getElementById('addProductButton1').addEventListener('click', function () {
-    const newProductDetails = {
-        name: 'Cookies',
-        price: '5k',
-        category: 'delicacies',
-    };
-    addNewProduct(newProductDetails);
-});
 
-// Fetch products 
-document.addEventListener('DOMContentLoaded', function () {
-    fetchProducts();
-});
 
-    </script>
+
+
+    
 </html>

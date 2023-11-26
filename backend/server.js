@@ -1,16 +1,16 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-
 const app = express();
 const PORT = process.env.PORT || 3000;
+const cors = require('cors')
 
 // Body-parser middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(cors());
 // MongoDB Connection
-mongoose.connect('mongodb+srv://nomio:0710@coffeeshop.db2nh7y.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect("mongodb+srv://nomio:0710@coffeeshop.db2nh7y.mongodb.net/?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
