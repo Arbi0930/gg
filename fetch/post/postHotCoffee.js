@@ -1,4 +1,3 @@
-
 function addNewProduct(productDetails) {
     fetch('http://localhost:3000/api/products', {
         method: 'POST',
@@ -23,22 +22,31 @@ function addNewProduct(productDetails) {
     });
 };
 document.addEventListener('DOMContentLoaded', () => {
-    for (let buttonNumber = 8; buttonNumber <= 11; buttonNumber++) {
+    for (let buttonNumber = 4; buttonNumber <= 7; buttonNumber++) {
         const addProductButton = document.getElementById(`addProductButton${buttonNumber}`);
 
         if (addProductButton) {
             addProductButton.addEventListener('click', () => {
+                const imgUrlElement = document.getElementById(`img${buttonNumber}`);
                 const productDetails = {
                     name: document.getElementById(`category${buttonNumber}`).innerText,
                     price: parseInt(document.getElementById(`price${buttonNumber}`).innerText.replace(/[^0-9]/g, '')),
-                    category: document.getElementById('name2').innerText,
+                    category: document.getElementById(`category${buttonNumber}`).innerText,
+                    imgUrl: imgUrlElement ? imgUrlElement.src : null
                 };
+
+                // Check if imgUrl
+                if (productDetails.imgUrl === null) {
+                    console.error('imgUrl хоосон байна.');
+                    return;
+                }
+
                 addNewProduct(productDetails);
 
-                // Display Awesome Alert
+                // Display Awesome Alert message
                 Swal.fire({
                     title: 'Захиалга Амжилттай!',
-                    text: `Таны бүтээгдэхүүн ${productDetails.name} амжилттай хадгалагдлаа.`,
+                    text: `Таны бүтээгдэхүүн ${productDetails.name} амжилттай захиаллаа.`,
                     icon: 'success',
                     showConfirmButton: false,
                     timer: 1500,
@@ -47,6 +55,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
-
-
-

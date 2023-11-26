@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Сагс</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<script src="../fetch/get/getProduct.js"></script>
+<script src="../fetch/get/getPrice.js"></script>
+<script src="../fetch/post/postPayment.js"></script>
+<body>
+  <header>
+    <h1>Сагс</h1>
+  </header>
+  <main>
+    <section class="cart" id="productList">
+      <h2>Сагс</h2>
+      <ul>
+        
+      </ul>
+    </section>
+    <section class="order-summary" id="orderSummary">
+        <h2>Захиалгын хураангуй</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Нэр</th>
+                    <th>Үнэ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be dynamically added here -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><strong>Нийлбэр</strong></td>
+                    <td class="total-cell">0₮</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+    
+    
+    
+    <section class="payment">
+      <h2>Төлбөр Төлөх</h2>
+      <form action="/checkout" method="post">
+       <img src="./assets/img/khaanbank.png" alt="qrcode" class="bx-align-middle">
+        <input type="submit" value="Төлөх">
+      </form>
+    </section>
+  </main>
+</body>
+<script src="scripts.js"></script>
+</html>
