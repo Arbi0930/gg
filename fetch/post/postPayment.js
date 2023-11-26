@@ -35,17 +35,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     totalCell.textContent = '0₮';
                 }
 
-                // Clear products from the list
+                // Clear products list
                 if (productList) {
                     productList.innerHTML = '';
                 }
 
-                // Clear order summary content
+                // Clear order summary 
                 if (orderSummary) {
                     orderSummary.innerHTML = '';
                 }
 
-                // Clear local storage 
+                // Clear local storage
                 localStorage.removeItem('cart');
                 window.location.href = '../../index.html#products';
 

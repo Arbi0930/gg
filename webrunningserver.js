@@ -3,7 +3,6 @@ const path = require('path'); // Import the path module
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
 // Serve static files from the root directory
 app.use(express.static(path.join(__dirname, '/')));
 
@@ -13,6 +12,7 @@ app.get('/', (req, res) => {
 });
 
 // Start the server
-app.listen(PORT, () => {
-  console.log(`Server  port ${PORT}`);
-});
+app.listen(PORT, '192.168.92.212', () => {
+    console.log(`Server running at http://192.168.92.212:${PORT}/`);
+  });
+
