@@ -15,11 +15,17 @@ function addNewProduct(productDetails) {
     })
     .then((data) => {
         console.log('Шинэ бүтээгдэхүүн:', data);
-        alert('Захиалга амжилттай');
+        Toastify({
+            text: 'Захиалга амжилттай',
+            backgroundColor: 'green',
+        }).showToast();
     })
     .catch((error) => {
         console.error('Error:', error);
-        alert('Захиалга амжилтгүй');
+        Toastify({
+            text: 'Захиалга амжилтгүй',
+            backgroundColor: 'red',
+        }).showToast();
     });
 };
 document.addEventListener('DOMContentLoaded', () => {
