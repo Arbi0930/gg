@@ -13,10 +13,16 @@
 
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
+        
+<!-- Include Toastify from a CDN -->
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
 
         <title>Coffee shop QR menu</title>
     </head>
-    <script src="./fetch/post.js"></script>
+    <script src="./fetch/postNewProduct.js"></script>
+    <script src="./fetch/postHotCoffee.js"></script>
+    <script src="./fetch/postAmttan.js"></script>
     <body>
         <!-- LOADER -->
         <div class="load" id="load">
@@ -151,12 +157,12 @@
 
                     <ul class="products__filters">
                         <li class="products__item products__line active-product" data-filter=".delicacies">
-                            <h3 class="products__title" id="name1">Шинэ нэмэгдсэн</h3>
+                            <h3 class="products__title" id="name3">Шинэ нэмэгдсэн</h3>
                             <span class="products__stock">3 бүтээгдэхүүн</span>
                         </li>
 
                         <li class="products__item products__line" data-filter=".coffee">
-                            <h3 class="products__title" id="name1">Халуун кофе</h3>
+                            <h3 class="products__title" id="name2">Халуун кофе</h3>
                             <span class="products__stock">5 бүтээгдэхүүн</span>
                         </li>
 
@@ -177,7 +183,7 @@
                                 <h2 class="products__price" id="price1">5000₮</h2>
                                 <h3 class="products__name" id="category1">Cookies</h3>
     
-                                <button class="button products__button" id="addProductButton1">
+                                <button class="button products__button products_event" id="addProductButton1">
                                     <i class='bx bx-shopping-bag'></i>
                                 </button>
                             </div>
@@ -189,10 +195,10 @@
                             </div>
 
                             <div class="products__data">
-                                <h2 class="products__price" id="price1">6000₮</h2>
-                                <h3 class="products__name" id="category1">Croissant</h3>
+                                <h2 class="products__price" id="price2">6000₮</h2>
+                                <h3 class="products__name" id="category2">Croissant</h3>
     
-                                <button class="button products__button" id="addProductButton1">
+                                <button class="button products__button products" id="addProductButton2">
                                     <i class='bx bx-shopping-bag'></i>
                                 </button>
                             </div>
@@ -204,10 +210,10 @@
                             </div>
 
                             <div class="products__data">
-                                <h2 class="products__price" id="price1">4000₮</h2>
-                                <h3 class="products__name" id="category1">Croissant</h3>
+                                <h2 class="products__price" id="price3">4000₮</h2>
+                                <h3 class="products__name" id="category3">Croissant</h3>
     
-                                <button class="button products__button" id="addProductButton1">
+                                <button class="button products__button" id="addProductButton3">
                                     <i class='bx bx-shopping-bag'></i>
                                 </button>
                             </div>
@@ -220,10 +226,10 @@
                             </div>
 
                             <div class="products__data">
-                                <h2 class="products__price" id="price1">7000₮</h2>
-                                <h3 class="products__name" id="category1">Americano</h3>
+                                <h2 class="products__price" id="price4">7000₮</h2>
+                                <h3 class="products__name" id="category4">Americano</h3>
     
-                                <button class="button products__button" id="addProductButton1">
+                                <button class="button products__button" id="addProductButton4">
                                     <i class='bx bx-shopping-bag'></i>
                                 </button>
                             </div>
@@ -235,11 +241,11 @@
                             </div>
 
                             <div class="products__data">
-                                <h2 class="products__price" id="price1">12000₮</h2>
-                                <h3 class="products__name" id="category1">Pure coffee</h3>
+                                <h2 class="products__price" id="price5">12000₮</h2>
+                                <h3 class="products__name" id="category5">Pure coffee</h3>
     
                                 <!-- Update  button elements  IDs -->
-<button class="button products__button" id="addProductButton1">
+<button class="button products__button" id="addProductButton5">
     <i class='bx bx-shopping-bag'></i>
 </button>
                          
@@ -252,11 +258,11 @@
                             </div>
 
                             <div class="products__data">
-                                <h2 class="products__price" id="price1">7500₮</h2>
-                                <h3 class="products__name" id="category1">Latte</h3>
+                                <h2 class="products__price" id="price6">7500₮</h2>
+                                <h3 class="products__name" id="category6">Latte</h3>
     
                                 <!-- Update  button elements  IDs -->
-<button class="button products__button" id="addProductButton1">
+<button class="button products__button" id="addProductButton6">
     <i class='bx bx-shopping-bag'></i>
 </button>
                       
@@ -269,11 +275,11 @@
                             </div>
 
                             <div class="products__data">
-                                <h2 class="products__price" id="price2">8000₮</h2>
-                                <h3 class="products__name" id="category2">Moka Coffee</h3>
+                                <h2 class="products__price" id="price7">8000₮</h2>
+                                <h3 class="products__name" id="category7">Moka Coffee</h3>
     
                                 <!-- Update  button elements  IDs -->
-<button class="button products__button" id="addProductButton2">
+<button class="button products__button" id="addProductButton7">
     <i class='bx bx-shopping-bag'></i>
 </button>
                       
@@ -287,11 +293,11 @@
                             </div>
 
                             <div class="products__data">
-                                <h2 class="products__price" id="price1">8000₮</h2>
-                                <h3 class="products__name" id="category1">Cream Cake</h3>
+                                <h2 class="products__price" id="price8">8000₮</h2>
+                                <h3 class="products__name" id="category8">Cream Cake</h3>
     
                                 <!-- Update  button elements  IDs -->
-<button class="button products__button" id="addProductButton1">
+<button class="button products__button" id="addProductButton8">
     <i class='bx bx-shopping-bag'></i>
 </button>
                            
@@ -304,11 +310,11 @@
                             </div>
 
                             <div class="products__data" name="name">
-                                <h2 class="products__price" name="price1">5000₮</h2>
-                                <h3 class="products__name" name="category1">Chocolate Croissant</h3>
+                                <h2 class="products__price" id="price9">5000₮</h2>
+                                <h3 class="products__name" id="category9">Chocolate Croissant</h3>
     
                                 <!-- Update  button elements  IDs -->
-<button class="button products__button" id="addProductButton1">
+<button class="button products__button" id="addProductButton9">
     <i class='bx bx-shopping-bag'></i>
 </button>
                          
@@ -321,11 +327,11 @@
                             </div>
 
                             <div class="products__data">
-                                <h2 class="products__price" id="price1">15000₮</h2>
-                                <h3 class="products__name" id="category1">Pancake</h3>
+                                <h2 class="products__price" id="price10">15000₮</h2>
+                                <h3 class="products__name" id="category10">Pancake</h3>
     
                                 <!-- Update  button elements  IDs -->
-<button class="button products__button" id="addProductButton1">
+<button class="button products__button" id="addProductButton10">
     <i class='bx bx-shopping-bag'></i>
 </button>
                          
@@ -338,11 +344,11 @@
                             </div>
 
                             <div class="products__data">
-                                <h2 class="products__price" id="price1">12000₮</h2>
-                                <h3 class="products__name" id="category1">Milk Cake</h3>
+                                <h2 class="products__price" id="price11">12000₮</h2>
+                                <h3 class="products__name" id="category11">Milk Cake</h3>
     
                                 <!-- Update  button elements  IDs -->
-<button class="button products__button" id="addProductButton1">
+<button class="button products__button" id="addProductButton11">
     <i class='bx bx-shopping-bag'></i>
 </button>
                            
