@@ -13,7 +13,8 @@
 
     <!-- Your QR code generation script -->
     <script>
-        var qrData = "http://192.168.92.212:3001";
+        // var qrData = "http://192.168.92.212:3001";
+        var qrData = "http://localhost:3001"
 
         var qrcode = new QRCode(document.getElementById("qrcode"), {
             text: qrData,

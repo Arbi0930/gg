@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 });
 
 // Start the server
-app.listen(PORT, '192.168.92.212', () => {
-    console.log(`Server running at http://192.168.92.212:${PORT}/`);
+app.listen(PORT, () => {
+    console.log(`Server running at ${PORT}`);
   });
 
